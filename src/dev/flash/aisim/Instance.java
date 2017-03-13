@@ -24,6 +24,9 @@ public class Instance implements Runnable {
 	private Thread thread;
 	private int fps;
 	
+	private World world;
+	private EntityManager entityManager;
+	
 	//Input
 	//private KeyManager keyManager;
 	//private MouseManager mouseManager;
@@ -48,6 +51,14 @@ public class Instance implements Runnable {
 		
 		//Create window
 		display = new Display(title, width, height);
+		
+		world = new World(15, 15);
+		entityManager = new EntityManager();
+		for(int i = 0; i<250; i++){
+			for(int j = 0; j<250; j++){
+				entityManager.addEntity(new Entity(new Vector2(i, j), (int)(i*(j+i+1)), 3, 5, 4, 5));
+			}
+		}
 		
 		/*
 		display.getFrame().addKeyListener(keyManager);
@@ -82,7 +93,7 @@ public class Instance implements Runnable {
 	}
 	
 	private void tick(double delta) {
-		//State.getState().tick(delta);
+		entityManager.tick(delta);
 	}
 	
 	private void render() {
@@ -101,7 +112,7 @@ public class Instance implements Runnable {
 		g.setColor(Color.WHITE);
 		
 		//Draw Here
-		//State.getState().render(g);
+		entityManager.render(g);
 		
 		//End Draw
 		bs.show();
