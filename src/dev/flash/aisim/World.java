@@ -1,6 +1,6 @@
 package dev.flash.aisim;
 
-import java.util.Random;
+import java.awt.*;
 
 /**
  * Created by Flash on 11/03/2017.
@@ -15,7 +15,7 @@ public class World {
 		this.height = height;
 		init();
 	}
-
+	
 	public void init() {
 		Vector2[][] tiles = new Vector2[width][height];
 		for(int y = 0; y < height; y++) {
@@ -24,4 +24,13 @@ public class World {
 			}
 		}
 	}
+	
+	public void tick(double delta) {
+		
+	}
+	
+	public void render(Graphics g) {
+		
+	}
+	
 }
