@@ -32,7 +32,12 @@ public class Entity {
 		this.maxAge = age;
 		this.aggro = aggro;
 		this.hpReq = hpReq;
-		color = new Color((family * 7)%255, (family * 13)%255, (family * 25)%255);
+		
+		int col1 = 0;
+		int col2 = 0;
+		int col3 = 0;
+
+		color = new Color((col1)%255, (col2)%255, (col3)%255);
 	}
 	
 	public void tick(double delta) {

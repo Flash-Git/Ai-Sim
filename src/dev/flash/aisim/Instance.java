@@ -54,9 +54,12 @@ public class Instance implements Runnable {
 		
 		world = new World(15, 15);
 		entityManager = new EntityManager();
+		int counter = 0;
 		for(int i = 0; i<250; i++){
 			for(int j = 0; j<250; j++){
-				entityManager.addEntity(new Entity(new Vector2(i, j), (int)(i*(j+i+1)), 3, 5, 4, 5));
+				counter++;
+				//i*(j+i+1)
+				entityManager.addEntity(new Entity(new Vector2(i, j), counter, 3, 5, 4, 5));
 			}
 		}
 		
