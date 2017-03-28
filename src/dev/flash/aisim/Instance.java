@@ -2,6 +2,7 @@ package dev.flash.aisim;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 /**
  * Created by Flash on 11/03/2017.
@@ -54,12 +55,14 @@ public class Instance implements Runnable {
 		
 		world = new World(15, 15);
 		entityManager = new EntityManager();
-		int counter = 0;
+		Random random = new Random();
+		
 		for(int i = 0; i<250; i++){
 			for(int j = 0; j<250; j++){
-				counter++;
-				//i*(j+i+1)
-				entityManager.addEntity(new Entity(new Vector2(i, j), counter, 3, 5, 4, 5));
+				int r = random.nextInt(255);
+				int g = random.nextInt(255);
+				int b = random.nextInt(255);
+				entityManager.addEntity(new Entity(new Vector2(i, j), new Color(r, g, b), 3, 5, 4, 5));
 			}
 		}
 		

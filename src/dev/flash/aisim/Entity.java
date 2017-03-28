@@ -23,21 +23,15 @@ public class Entity {
 	
 	private Color color;
 	
-	public Entity(Vector2 pos, int family, int health, int age, int aggro, int hpReq) {
+	public Entity(Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
 		this.pos = pos;
-		this.family = family;
+		this.color = color;
 		this.health = health;
 		this.maxHealth = health;
 		this.age = age;
 		this.maxAge = age;
 		this.aggro = aggro;
 		this.hpReq = hpReq;
-		
-		int col1 = 0;
-		int col2 = 0;
-		int col3 = 0;
-
-		color = new Color((col1)%255, (col2)%255, (col3)%255);
 	}
 	
 	public void tick(double delta) {
