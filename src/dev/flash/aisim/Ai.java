@@ -6,7 +6,7 @@ import java.awt.*;
  * Created by Flash on 13/03/2017.
  */
 
-public class Entity {
+public class Ai {
 	
 	private Vector2 pos;
 	
@@ -23,7 +23,7 @@ public class Entity {
 	
 	private Color color;
 	
-	public Entity(Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
+	public Ai(Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
 		this.pos = pos;
 		this.color = color;
 		this.health = health;

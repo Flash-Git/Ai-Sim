@@ -2,7 +2,6 @@ package dev.flash.aisim;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.util.Random;
 
 /**
  * Created by Flash on 11/03/2017.
@@ -28,12 +27,14 @@ public class Instance implements Runnable {
 	private World world;
 	private EntityManager entityManager;
 	
+	private FoodSpawner foodSpawner;
+	
 	//Input
 	//private KeyManager keyManager;
 	//private MouseManager mouseManager;
 	
 	//Handler
-	//private Handler handler;
+	private Handler handler;
 	
 	//private GameState gameState;
 	//private MenuState menuState;
@@ -48,24 +49,33 @@ public class Instance implements Runnable {
 	}
 	
 	private void init() {
-		//handler = new Handler(this);
+		handler = new Handler(this);
 		
 		//Create window
 		display = new Display(title, width, height);
 		
 		world = new World(15, 15);
+		
 		entityManager = new EntityManager();
-		Random random = new Random();
+		foodSpawner = new FoodSpawner(handler);
+		
+		entityManager.addEntity(new Ai(new Vector2(5, 7), new Color(20, 200, 20), 3, 5, 4, 5));
+		entityManager.addEntity(new Ai(new Vector2(15, 7), new Color(200, 20, 2), 3, 5, 4, 5));
+		entityManager.addEntity(new Ai(new Vector2(10, 20), new Color(20, 20, 200), 3, 5, 4, 5));
+		entityManager.addFood(new Food(new Vector2(15, 35)));
+
+		
+		/*Random random = new Random();
 		
 		for(int i = 0; i<250; i++){
 			for(int j = 0; j<250; j++){
 				int r = random.nextInt(255);
 				int g = random.nextInt(255);
 				int b = random.nextInt(255);
-				entityManager.addEntity(new Entity(new Vector2(i, j), new Color(r, g, b), 3, 5, 4, 5));
+				entityManager.addEntity(new Ai(new Vector2(i, j), new Color(r, g, b), 3, 5, 4, 5));
 			}
 		}
-		
+		*/
 		/*
 		display.getFrame().addKeyListener(keyManager);
 		display.getFrame().addMouseListener(mouseManager);
@@ -100,6 +110,7 @@ public class Instance implements Runnable {
 	
 	private void tick(double delta) {
 		entityManager.tick(delta);
+		foodSpawner.tick();
 	}
 	
 	private void render() {
@@ -225,14 +236,8 @@ public class Instance implements Runnable {
 	public int getHeight() {
 		return display.getHeight();
 	}
-/*
-	public GameState getGameState() {
-		return gameState;
-	}
 	
-	public MenuState getMenuState() {
-		return menuState;
+	public EntityManager getEntityManager() {
+		return entityManager;
 	}
-
-*/
 }
