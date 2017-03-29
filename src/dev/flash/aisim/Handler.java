@@ -12,8 +12,12 @@ public class Handler {
 		this.instance = instance;
 	}
 	
-	public Instance getInstance(){
+	public Instance getInstance() {
 		return instance;
+	}
+	
+	public EntityManager getEntityManager() {
+		return instance.getEntityManager();
 	}
 	
 }

@@ -48,7 +48,7 @@ public class EntityManager {
 		foods.remove(f);
 	}
 	
-	public boolean posClear(Vector2 pos){
+	public boolean posClear(Vector2 pos) {
 		for(Ai e : entities) {
 			if(e.getPos().x == pos.x && e.getPos().y == pos.y) {
 				return false;
