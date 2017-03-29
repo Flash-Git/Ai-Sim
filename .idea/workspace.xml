@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6de061b-26d2-45e9-8020-cb9c8f4b222c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Food.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Food.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/FoodSpawner.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/FoodSpawner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Handler.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Handler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Launcher.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Timer.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Timer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Vector2.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Vector2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,30 +33,30 @@
       <file leaf-file-name="Instance.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Instance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="223">
+              <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5267#5268#0" expanded="true" />
-                <element signature="e#5294#5295#0" expanded="true" />
+                <element signature="e#5297#5298#0" expanded="true" />
+                <element signature="e#5324#5325#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EntityManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-                <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+                <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -79,12 +72,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ai.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ai.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="297">
+              <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,13 +166,13 @@
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/World.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManafer.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Entity.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/FoodSpawner.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Food.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Timer.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Handler.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
       </list>
     </option>
   </component>
@@ -691,12 +686,12 @@
       <workItem from="1489986497666" duration="214000" />
       <workItem from="1490342883578" duration="604000" />
       <workItem from="1490624983488" duration="1840000" />
-      <workItem from="1490688811298" duration="9283000" />
+      <workItem from="1490688811298" duration="10506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28753000" />
+    <option name="totallyTimeSpent" value="29976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -712,7 +707,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18093175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18093175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -764,8 +759,8 @@
           <caret line="64" column="103" lean-forward="true" selection-start-line="64" selection-start-column="103" selection-end-line="64" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,12 +771,12 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -822,7 +817,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -840,8 +837,8 @@
           <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -852,12 +849,12 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -898,7 +895,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,8 +915,8 @@
           <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -928,12 +927,12 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -974,7 +973,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,8 +993,8 @@
           <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1004,12 +1005,12 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1026,7 +1027,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,8 +1071,8 @@
           <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1080,12 +1083,12 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1102,7 +1105,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,8 +1159,8 @@
           <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1198,18 +1203,6 @@
           <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
             <element signature="e#10499#10500#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Instance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5267#5268#0" expanded="true" />
-            <element signature="e#5294#5295#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1285,22 +1278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <marker date="1490786489582" expanded="false" signature="1213:1218" ph=" { " />
-            <marker date="1490786489582" expanded="false" signature="1234:1237" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1318,9 +1295,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="297">
+          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Instance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5297#5298#0" expanded="true" />
+            <element signature="e#5324#5325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <marker date="1490787865722" expanded="false" signature="1337:1342" ph=" { " />
+            <marker date="1490787865722" expanded="false" signature="1358:1361" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>

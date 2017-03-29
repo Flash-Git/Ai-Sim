@@ -1,12 +1,18 @@
 package dev.flash.aisim;
 
 import java.awt.*;
+import java.util.Random;
 
 /**
  * Created by Flash on 13/03/2017.
  */
 
 public class Ai {
+	
+	public final static int UP = 0;
+	public final static int RIGHT = 1;
+	public final static int DOWN = 2;
+	public final static int LEFT = 3;
 	
 	private Vector2 pos;
 	
@@ -23,7 +29,10 @@ public class Ai {
 	
 	private Color color;
 	
-	public Ai(Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
+	private Handler handler;
+	
+	public Ai(Handler handler, Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
+		this.handler = handler;
 		this.pos = pos;
 		this.color = color;
 		this.health = health;
@@ -39,13 +48,38 @@ public class Ai {
 	}
 	
 	public void turn() {
-		
+		Random direction = new Random();
+		move(direction.nextInt(4));
 	}
 	
 	public void render(Graphics g) {
-		
 		g.setColor(color);
-		g.fillRect((int) pos.x*8+1, (int) pos.y*8+1, 6, 6);
+		g.fillRect((int) pos.x * 8 + 1, (int) pos.y * 8 + 1, 6, 6);
+	}
+	
+	public boolean move(int direction) {
+		Vector2 newPos;
+		switch(direction) {
+			case UP:
+				newPos = new Vector2(pos.x, pos.y - 1);
+				break;
+			case RIGHT:
+				newPos = new Vector2(pos.x + 1, pos.y);
+				break;
+			case DOWN:
+				newPos = new Vector2(pos.x, pos.y + 1);
+				break;
+			case LEFT:
+				newPos = new Vector2(pos.x - 1, pos.y);
+				break;
+			default:
+				newPos = pos;
+		}
+		if(!handler.getEntityManager().posClear(newPos)) {
+			return false;
+		}
+		pos = newPos;
+		return true;
 	}
 	
 	

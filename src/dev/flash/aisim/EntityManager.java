@@ -11,15 +11,22 @@ public class EntityManager {
 	
 	private ArrayList<Ai> entities;
 	private ArrayList<Food> foods;
+	private Timer timer;
 	
 	public EntityManager() {
 		entities = new ArrayList<>();
 		foods = new ArrayList<>();
+		timer = new Timer(true, 100);
 	}
 	
 	public void tick(double delta) {
 		for(Ai e : entities) {
 			e.tick(delta);
+		}
+		if(timer.isDone()){
+			for(Ai e : entities){
+				e.turn();
+			}
 		}
 	}
 	
