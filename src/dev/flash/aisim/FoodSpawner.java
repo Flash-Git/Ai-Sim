@@ -7,7 +7,7 @@ import java.util.Random;
  */
 
 public class FoodSpawner {
-
+	
 	Handler handler;
 	EntityManager entityManager;
 	Timer timer;
@@ -16,23 +16,23 @@ public class FoodSpawner {
 	
 	public FoodSpawner(Handler handler) {
 		this.handler = handler;
-		this.timer = new Timer(true, 10);
+		this.timer = new Timer(true, 100);
 		random = new Random();
 		entityManager = handler.getInstance().getEntityManager();
 	}
 	
-	public void tick(){
-		if(timer.isDone()){
+	public void tick() {
+		if(timer.isDone()) {
 			spawnFood();
-
+			
 		}
 	}
 	
-	public void spawnFood(){
-		Vector2 foodPos = new Vector2(random.nextInt(100), random.nextInt(100));
-		if(entityManager.posClear(foodPos)){
+	public void spawnFood() {
+		Vector2 foodPos = new Vector2(random.nextInt(200), random.nextInt(200));
+		if(entityManager.posClear(foodPos)) {
 			entityManager.addFood(new Food(foodPos));
-		}else{
+		} else {
 			spawnFood();
 		}
 	}
