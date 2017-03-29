@@ -62,7 +62,6 @@ public class Instance implements Runnable {
 		entityManager.addEntity(new Ai(new Vector2(5, 7), new Color(20, 200, 20), 3, 5, 4, 5));
 		entityManager.addEntity(new Ai(new Vector2(15, 7), new Color(200, 20, 2), 3, 5, 4, 5));
 		entityManager.addEntity(new Ai(new Vector2(10, 20), new Color(20, 20, 200), 3, 5, 4, 5));
-		entityManager.addFood(new Food(new Vector2(15, 35)));
 
 		
 		/*Random random = new Random();
@@ -116,7 +115,7 @@ public class Instance implements Runnable {
 	private void render() {
 		//Draw frames before displaying them
 		bs = display.getCanvas().getBufferStrategy();
-		if (bs == null) {
+		if(bs == null) {
 			display.getCanvas().createBufferStrategy(2);//amount of stored up frames ready before pushing to screen
 			return;
 		}
@@ -153,14 +152,14 @@ public class Instance implements Runnable {
 		
 		long startTime = System.currentTimeMillis() / 1000;
 		
-		while (running) {
+		while(running) {
 			now = System.nanoTime();
 			timer += now - lastTime;
 			delta += (now - lastTime) / timePerTick;
 			
 			lastTime = now;
 			
-			if (delta >= 1) {//this should avoid lost or gained frames from speeding up or slowing down the game
+			if(delta >= 1) {//this should avoid lost or gained frames from speeding up or slowing down the game
 				deltaNow = System.nanoTime();
 				deltaTime = deltaNow - deltaLastTime;
 				
@@ -173,7 +172,7 @@ public class Instance implements Runnable {
 				deltaLastTime = deltaNow;
 			}
 			
-			if (timer >= 1000000000) {
+			if(timer >= 1000000000) {
 				System.out.println(" FPS: " + ticks + " " + (System.currentTimeMillis() / 1000 - startTime) + "s");
 				fps = ticks;
 				ticks = 0;
@@ -185,7 +184,7 @@ public class Instance implements Runnable {
 	
 	//Creates the thread
 	public synchronized void start() {
-		if (running == true) {
+		if(running == true) {
 			return;
 		}
 		running = true;
@@ -195,13 +194,13 @@ public class Instance implements Runnable {
 	
 	//Stops the code cleanly
 	public synchronized void stop() {
-		if (!running) {
+		if(!running) {
 			return;
 		}
 		running = false;
 		try {
 			thread.join();
-		} catch (InterruptedException e) {
+		} catch(InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
