@@ -54,21 +54,8 @@ public class Instance implements Runnable {
 		
 		world = new World(handler, 100, 100);
 		
-		
-		
-		
 
-		/*Random random = new Random();
 		
-		for(int i = 0; i<250; i++){
-			for(int j = 0; j<250; j++){
-				int r = random.nextInt(255);
-				int g = random.nextInt(255);
-				int b = random.nextInt(255);
-				entityManager.addEntity(new Ai(new Vector2(i, j), new Color(r, g, b), 3, 5, 4, 5));
-			}
-		}
-		*/
 		/*
 		display.getFrame().addKeyListener(keyManager);
 		display.getFrame().addMouseListener(mouseManager);

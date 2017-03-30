@@ -1,6 +1,7 @@
 package dev.flash.aisim;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -33,6 +34,8 @@ public class Ai {
 	
 	private Vector2 target;
 	
+	private ArrayList<Node> path;
+	
 	public Ai(Handler handler, Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
 		this.handler = handler;
 		this.pos = pos;
@@ -43,7 +46,11 @@ public class Ai {
 		this.maxAge = age;
 		this.aggro = aggro;
 		this.hpReq = hpReq;
+		path = new ArrayList<>();
 		target = new Vector2(pos.x, pos.y);
+		path.add(AStar.containsNode((int) target.x, (int) target.y, World.allNodes));
+		System.out.println(path.size());
+		
 	}
 	
 	public void tick(double delta) {
@@ -51,6 +58,10 @@ public class Ai {
 	}
 	
 	public void turn() {
+		for(int i = 1; i<path.size(); i++){
+			path.remove(i);
+		}
+		AStar.generatePath(handler, path, target);
 		Random direction = new Random();
 		move(direction.nextInt(4));
 	}
