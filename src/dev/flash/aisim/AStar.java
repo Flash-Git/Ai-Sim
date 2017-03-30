@@ -174,6 +174,10 @@ public class AStar {
 		if((y < 0)) {
 			return false;//if node is out of bounds
 		}
+		
+		if(!handler.getEntityManager().posClear(new Vector2(x, y))) {
+			return false;
+		}
 		return true;
 	}
 	
