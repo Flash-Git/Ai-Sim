@@ -2,7 +2,6 @@ package dev.flash.aisim;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by Flash on 13/03/2017.
@@ -62,7 +61,7 @@ public class Ai {
 		//Random direction = new Random();
 		//move(direction.nextInt(4));
 		
-		if(path.size()==0)
+		if(path.size() == 0)
 			return;
 		
 		pos.x = path.get(0).getX();
@@ -100,6 +99,29 @@ public class Ai {
 	}
 	
 	public boolean getNewTarget() {
+		Ai red = handler.getWorld().red;
+		Ai blue = handler.getWorld().blue;
+		Ai green = handler.getWorld().green;
+		if(this.equals(handler.getWorld().red)) {
+			target.x = green.pos.x;
+			target.y = green.pos.y;
+			return true;
+		}
+		if(this.equals(handler.getWorld().green)) {
+			target.x = blue.pos.x;
+			target.y = blue.pos.y;
+			return true;
+			
+		}
+		if(this.equals(handler.getWorld().blue)) {
+			target.x = red.pos.x;
+			target.y = red.pos.y;
+			return true;
+			
+		}
+		return false;
+		
+		/*
 		Random random = new Random();
 		
 		Vector2 newPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
@@ -109,6 +131,7 @@ public class Ai {
 		}
 		target = newPos;
 		return true;
+		*/
 	}
 	
 	

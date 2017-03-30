@@ -17,6 +17,10 @@ public class World {
 	
 	public static ArrayList<Node> allNodes;
 	
+	public Ai red;
+	public Ai green;
+	public Ai blue;
+	
 	public World(Handler handler, int width, int height) {
 		this.handler = handler;
 		this.width = width;
@@ -35,9 +39,9 @@ public class World {
 			}
 		}
 		
-		entityManager.addEntity(new Ai(handler, new Vector2(45, 30), new Color(20, 200, 20), 3, 5, 4, 5));
-		entityManager.addEntity(new Ai(handler, new Vector2(30, 25), new Color(200, 20, 2), 3, 5, 4, 5));
-		entityManager.addEntity(new Ai(handler, new Vector2(60, 20), new Color(20, 20, 200), 3, 5, 4, 5));
+		entityManager.addEntity(green = new Ai(handler, new Vector2(45, 30), new Color(20, 200, 20), 3, 5, 4, 5));
+		entityManager.addEntity(red = new Ai(handler, new Vector2(30, 25), new Color(200, 20, 2), 3, 5, 4, 5));
+		entityManager.addEntity(blue = new Ai(handler, new Vector2(60, 20), new Color(20, 20, 200), 3, 5, 4, 5));
 		
 		//allNodes.add(new Node(x, y, null));
 	}
