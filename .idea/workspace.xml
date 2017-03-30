@@ -4,7 +4,6 @@
     <list default="true" id="a6de061b-26d2-45e9-8020-cb9c8f4b222c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ai.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ai.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="104" column="129" lean-forward="false" selection-start-line="104" selection-start-column="129" selection-end-line="104" selection-end-column="129" />
+            <state relative-caret-position="620">
+              <caret line="95" column="25" lean-forward="true" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AStar.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AStar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,9 +209,9 @@
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/FoodSpawner.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/World.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
       </list>
     </option>
   </component>
@@ -727,12 +726,12 @@
       <workItem from="1490342883578" duration="604000" />
       <workItem from="1490624983488" duration="1840000" />
       <workItem from="1490688811298" duration="12047000" />
-      <workItem from="1490886395509" duration="9930000" />
+      <workItem from="1490886395509" duration="10641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41447000" />
+    <option name="totallyTimeSpent" value="42158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1564,16 +1563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1588,8 +1577,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="104" column="129" lean-forward="false" selection-start-line="104" selection-start-column="129" selection-end-line="104" selection-end-column="129" />
+        <state relative-caret-position="620">
+          <caret line="95" column="25" lean-forward="true" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
