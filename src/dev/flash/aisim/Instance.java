@@ -25,9 +25,7 @@ public class Instance implements Runnable {
 	private int fps;
 	
 	private World world;
-	private EntityManager entityManager;
 	
-	private FoodSpawner foodSpawner;
 	
 	//Input
 	//private KeyManager keyManager;
@@ -54,16 +52,11 @@ public class Instance implements Runnable {
 		//Create window
 		display = new Display(title, width, height);
 		
-		world = new World(15, 15);
 		
-		entityManager = new EntityManager();
-		foodSpawner = new FoodSpawner(handler);
 		
-		entityManager.addEntity(new Ai(handler, new Vector2(45, 30), new Color(20, 200, 20), 3, 5, 4, 5));
-		entityManager.addEntity(new Ai(handler, new Vector2(30, 25), new Color(200, 20, 2), 3, 5, 4, 5));
-		entityManager.addEntity(new Ai(handler, new Vector2(60, 20), new Color(20, 20, 200), 3, 5, 4, 5));
+		
+		
 
-		
 		/*Random random = new Random();
 		
 		for(int i = 0; i<250; i++){
@@ -108,8 +101,8 @@ public class Instance implements Runnable {
 	}
 	
 	private void tick(double delta) {
-		entityManager.tick(delta);
-		foodSpawner.tick();
+		world.tick(delta);
+		
 	}
 	
 	private void render() {
@@ -128,7 +121,7 @@ public class Instance implements Runnable {
 		g.setColor(Color.WHITE);
 		
 		//Draw Here
-		entityManager.render(g);
+		world.render(g);
 		
 		//End Draw
 		bs.show();
@@ -236,7 +229,7 @@ public class Instance implements Runnable {
 		return display.getHeight();
 	}
 	
-	public EntityManager getEntityManager() {
-		return entityManager;
+	public World getWorld() {
+		return world;
 	}
 }

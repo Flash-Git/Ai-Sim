@@ -17,7 +17,11 @@ public class Handler {
 	}
 	
 	public EntityManager getEntityManager() {
-		return instance.getEntityManager();
+		return instance.getWorld().getEntityManager();
+	}
+	
+	public World getWorld() {
+		return instance.getWorld();
 	}
 	
 }
