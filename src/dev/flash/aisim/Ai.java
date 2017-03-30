@@ -31,6 +31,8 @@ public class Ai {
 	
 	private Handler handler;
 	
+	private Vector2 target;
+	
 	public Ai(Handler handler, Vector2 pos, Color color, int health, int age, int aggro, int hpReq) {
 		this.handler = handler;
 		this.pos = pos;
@@ -41,6 +43,7 @@ public class Ai {
 		this.maxAge = age;
 		this.aggro = aggro;
 		this.hpReq = hpReq;
+		target = new Vector2(pos.x, pos.y);
 	}
 	
 	public void tick(double delta) {
@@ -75,6 +78,18 @@ public class Ai {
 			default:
 				newPos = pos;
 		}
+		if(!handler.getEntityManager().posClear(newPos)) {
+			return false;
+		}
+		pos = newPos;
+		return true;
+	}
+	
+	public boolean getNewTarget() {
+		Random random = new Random();
+		
+		Vector2 newPos = new Vector2(random.nextInt(10), random.nextInt(10));
+		
 		if(!handler.getEntityManager().posClear(newPos)) {
 			return false;
 		}

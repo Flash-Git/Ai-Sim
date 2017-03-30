@@ -16,7 +16,7 @@ public class FoodSpawner {
 	
 	public FoodSpawner(Handler handler) {
 		this.handler = handler;
-		this.timer = new Timer(true, 100);
+		this.timer = new Timer(true, 15);
 		random = new Random();
 		entityManager = handler.getInstance().getEntityManager();
 	}
@@ -29,7 +29,7 @@ public class FoodSpawner {
 	}
 	
 	public void spawnFood() {
-		Vector2 foodPos = new Vector2(random.nextInt(200), random.nextInt(200));
+		Vector2 foodPos = new Vector2(random.nextInt(100), random.nextInt(100));
 		if(entityManager.posClear(foodPos)) {
 			entityManager.addFood(new Food(foodPos));
 		} else {
