@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6de061b-26d2-45e9-8020-cb9c8f4b222c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/World.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" afterPath="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,12 +65,12 @@
       <file leaf-file-name="EntityManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="323">
+              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-                <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+                <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+                <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -79,8 +79,8 @@
       <file leaf-file-name="Ai.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+            <state relative-caret-position="518">
+              <caret line="104" column="129" lean-forward="false" selection-start-line="104" selection-start-column="129" selection-end-line="104" selection-end-column="129" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +91,8 @@
       <file leaf-file-name="AStar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,13 +205,13 @@
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Entity.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Food.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Timer.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Node.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Handler.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/FoodSpawner.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/World.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Instance.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/aisim/AStar.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/aisim/Ai.java" />
       </list>
     </option>
@@ -727,12 +727,12 @@
       <workItem from="1490342883578" duration="604000" />
       <workItem from="1490624983488" duration="1840000" />
       <workItem from="1490688811298" duration="12047000" />
-      <workItem from="1490886395509" duration="8542000" />
+      <workItem from="1490886395509" duration="9930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40059000" />
+    <option name="totallyTimeSpent" value="41447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -886,8 +886,8 @@
           <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -918,8 +918,8 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1011,8 +1011,8 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1104,8 +1104,8 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1197,8 +1197,8 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1290,8 +1290,8 @@
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1528,18 +1528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1490888089633" expanded="false" signature="1498:1503" ph=" { " />
-            <marker date="1490888089633" expanded="false" signature="1519:1522" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Instance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -1568,16 +1556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1586,10 +1564,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490896029045" expanded="false" signature="1498:1503" ph=" { " />
+            <marker date="1490896029045" expanded="false" signature="1519:1522" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/aisim/Ai.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        <state relative-caret-position="518">
+          <caret line="104" column="129" lean-forward="false" selection-start-line="104" selection-start-column="129" selection-end-line="104" selection-end-column="129" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

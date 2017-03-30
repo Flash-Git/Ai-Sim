@@ -36,8 +36,8 @@ public class AStar {
 	private AStar() {
 	}
 	
-	public static void generatePath(Handler handler, ArrayList<Node> path, Vector2 target) {
-		
+	public static void generatePath(Handler handler, ArrayList<Node> path, Vector2 start, Vector2 target) {
+
 		//reset static variables
 		for(Node n : World.allNodes) {
 			n.setParent(null);
@@ -51,8 +51,9 @@ public class AStar {
 		//Clear all 3 lists
 		open.clear();
 		closed.clear();
-		Node parent = containsNode(path.get(0).getX(), path.get(0).getY(), World.allNodes);//Node that points to the Node that led to it's creation //Initial Node
 		path.clear();
+		
+		Node parent = containsNode((int) start.x, (int) start.y, World.allNodes);//Node that points to the Node that led to it's creation //Initial Node
 		
 		if(parent == null) {
 			System.err.println("no node found on allNodes list at " + parent.getX() + ", " + parent.getY() + " for initial parent node");

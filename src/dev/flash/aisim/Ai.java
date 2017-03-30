@@ -47,9 +47,9 @@ public class Ai {
 		this.aggro = aggro;
 		this.hpReq = hpReq;
 		path = new ArrayList<>();
-		target = new Vector2(pos.x, pos.y);
+		target = new Vector2(pos.x / 8, (int) pos.y / 8);
 		path.add(AStar.containsNode((int) target.x, (int) target.y, World.allNodes));
-		System.out.println(path.size());
+		//System.out.println(path.size());
 		
 	}
 	
@@ -58,12 +58,15 @@ public class Ai {
 	}
 	
 	public void turn() {
-		for(int i = 1; i<path.size(); i++){
-			path.remove(i);
-		}
-		AStar.generatePath(handler, path, target);
-		Random direction = new Random();
-		move(direction.nextInt(4));
+		AStar.generatePath(handler, path, new Vector2((int) pos.x / 8, (int) pos.y / 8), target);
+		//Random direction = new Random();
+		//move(direction.nextInt(4));
+		
+		if(path.size()==0)
+			return;
+		
+		pos.x = path.get(0).getX()*8;
+		pos.y = path.get(0).getY()*8;
 	}
 	
 	public void render(Graphics g) {
@@ -99,7 +102,7 @@ public class Ai {
 	public boolean getNewTarget() {
 		Random random = new Random();
 		
-		Vector2 newPos = new Vector2(random.nextInt(10), random.nextInt(10));
+		Vector2 newPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
 		
 		if(!handler.getEntityManager().posClear(newPos)) {
 			return false;

@@ -17,7 +17,7 @@ public class EntityManager {
 	public EntityManager() {
 		entities = new ArrayList<>();
 		foods = new ArrayList<>();
-		turnTimer = new Timer(true, 100);
+		turnTimer = new Timer(true, 500);
 		tempTimer = new Timer(true, 4000);
 	}
 	
