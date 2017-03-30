@@ -52,6 +52,7 @@ public class Instance implements Runnable {
 		//Create window
 		display = new Display(title, width, height);
 		
+		world = new World(handler, 100, 100);
 		
 		
 		
