@@ -24,4 +24,8 @@ public class Handler {
 		return instance.getWorld();
 	}
 	
+	public ChunkManager getChunkManager() {
+		return instance.getWorld().getChunkManager();
+	}
+	
 }

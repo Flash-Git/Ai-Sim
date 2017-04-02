@@ -10,8 +10,9 @@ public class Food {
 	
 	private Vector2 pos;
 	
-	public Food(Vector2 pos) {
+	public Food(Handler handler, Vector2 pos) {
 		this.pos = pos;
+		handler.getChunkManager().getChunk((int)pos.x, (int)pos.y).getFoods().add(this);
 	}
 	
 	public void render(Graphics g) {

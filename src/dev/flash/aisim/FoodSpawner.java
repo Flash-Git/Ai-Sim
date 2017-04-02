@@ -29,7 +29,7 @@ public class FoodSpawner {
 	public void spawnFood() {
 		Vector2 foodPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
 		if(handler.getEntityManager().posClear(foodPos)) {
-			handler.getEntityManager().addFood(new Food(foodPos));
+			handler.getEntityManager().addFood(new Food(handler, foodPos));
 		} else {
 			spawnFood();
 		}

@@ -11,6 +11,7 @@ public class World {
 	
 	private int width, height;
 	private EntityManager entityManager;
+	private ChunkManager chunkManager;
 	
 	private FoodSpawner foodSpawner;
 	private Handler handler;
@@ -29,13 +30,26 @@ public class World {
 	}
 	
 	public void init() {
+		chunkManager = new ChunkManager();
+		
+		System.out.println(chunkManager);
+		System.out.println(getChunkManager());
+		System.out.println(handler);
+		System.out.println(handler.getChunkManager());
+		
 		entityManager = new EntityManager();
 		foodSpawner = new FoodSpawner(handler);
+
 		
 		allNodes = new ArrayList<>();
 		for(int x = 0; x < width; x++) {
 			for(int y = 0; y < height; y++) {
 				allNodes.add(new Node(x, y, null));
+				if(x % 5 == 0 && y % 5 == 0) {
+					chunkManager.addChunk(new Chunk(x/5, y/5));
+					System.out.println("new chunk " + x/5 + " " +y/5);
+					
+				}
 			}
 		}
 		
@@ -59,6 +73,10 @@ public class World {
 	
 	public EntityManager getEntityManager() {
 		return entityManager;
+	}
+	
+	public ChunkManager getChunkManager() {
+		return chunkManager;
 	}
 	
 	public int getWidth() {

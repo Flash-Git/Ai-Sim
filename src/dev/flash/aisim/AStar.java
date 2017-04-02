@@ -37,7 +37,7 @@ public class AStar {
 	}
 	
 	public static void generatePath(Handler handler, ArrayList<Node> path, Vector2 start, Vector2 target) {
-
+		
 		//reset static variables
 		for(Node n : World.allNodes) {
 			n.setParent(null);

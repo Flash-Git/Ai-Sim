@@ -47,9 +47,9 @@ public class Ai {
 		this.hpReq = hpReq;
 		path = new ArrayList<>();
 		target = new Vector2(pos.x, (int) pos.y);
-		path.add(AStar.containsNode((int) target.x, (int) target.y, World.allNodes));
-		//System.out.println(path.size());
+		System.out.println(handler.getChunkManager());
 		
+		handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getAis().add(this);
 	}
 	
 	public void tick(double delta) {
@@ -64,13 +64,26 @@ public class Ai {
 		if(path.size() == 0)
 			return;
 		
-		pos.x = path.get(0).getX();
-		pos.y = path.get(0).getY();
+		move(path.get(0).getX(), path.get(0).getY());
 	}
 	
 	public void render(Graphics g) {
 		g.setColor(color);
 		g.fillRect((int) pos.x * 8 + 1, (int) pos.y * 8 + 1, 6, 6);
+	}
+	
+	public boolean move(int x, int y) {
+		try {
+			handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getAis().remove(this);
+			handler.getChunkManager().getChunk(x, y).getAis().add(this);
+			pos.x = x;
+			pos.y = y;
+			return true;
+			
+		} catch(Exception e) {
+			System.err.println("failed to move ai " + e);
+			return false;
+		}
 	}
 	
 	public boolean move(int direction) {
