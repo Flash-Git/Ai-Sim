@@ -48,6 +48,8 @@ public class Ai {
 		path = new ArrayList<>();
 		target = new Vector2(pos.x, (int) pos.y);
 		handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getAis().add(this);
+		System.out.println(handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getX() + " " + handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getY());
+		
 	}
 	
 	public void tick(double delta) {
@@ -147,6 +149,11 @@ public class Ai {
 	
 	
 	//GETTERS AND SETTERS
+	
+	
+	public Color getColor() {
+		return color;
+	}
 	
 	public Vector2 getPos() {
 		return pos;

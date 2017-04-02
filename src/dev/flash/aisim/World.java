@@ -31,7 +31,7 @@ public class World {
 	
 	public void init() {
 		chunkManager = new ChunkManager();
-		entityManager = new EntityManager();
+		entityManager = new EntityManager(handler);
 		foodSpawner = new FoodSpawner(handler);
 		
 		allNodes = new ArrayList<>();
@@ -54,6 +54,8 @@ public class World {
 	public void tick(double delta) {
 		entityManager.tick(delta);
 		foodSpawner.tick();
+		
+		//System.out.println();
 	}
 	
 	public void render(Graphics g) {
