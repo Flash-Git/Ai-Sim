@@ -26,20 +26,13 @@ public class World {
 		this.handler = handler;
 		this.width = width;
 		this.height = height;
-		init();
+		
 	}
 	
 	public void init() {
 		chunkManager = new ChunkManager();
-		
-		System.out.println(chunkManager);
-		System.out.println(getChunkManager());
-		System.out.println(handler);
-		System.out.println(handler.getChunkManager());
-		
 		entityManager = new EntityManager();
 		foodSpawner = new FoodSpawner(handler);
-
 		
 		allNodes = new ArrayList<>();
 		for(int x = 0; x < width; x++) {
@@ -56,8 +49,6 @@ public class World {
 		entityManager.addEntity(green = new Ai(handler, new Vector2(45, 30), new Color(20, 200, 20), 3, 5, 4, 5));
 		entityManager.addEntity(red = new Ai(handler, new Vector2(30, 25), new Color(200, 20, 2), 3, 5, 4, 5));
 		entityManager.addEntity(blue = new Ai(handler, new Vector2(60, 20), new Color(20, 20, 200), 3, 5, 4, 5));
-		
-		//allNodes.add(new Node(x, y, null));
 	}
 	
 	public void tick(double delta) {

@@ -47,8 +47,6 @@ public class Ai {
 		this.hpReq = hpReq;
 		path = new ArrayList<>();
 		target = new Vector2(pos.x, (int) pos.y);
-		System.out.println(handler.getChunkManager());
-		
 		handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getAis().add(this);
 	}
 	

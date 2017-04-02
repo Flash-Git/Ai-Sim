@@ -53,8 +53,7 @@ public class Instance implements Runnable {
 		display = new Display(title, width, height);
 		
 		world = new World(handler, 100, 100);
-		
-
+		world.init();
 		
 		/*
 		display.getFrame().addKeyListener(keyManager);

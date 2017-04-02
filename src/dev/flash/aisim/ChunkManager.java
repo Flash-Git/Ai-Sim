@@ -23,7 +23,6 @@ public class ChunkManager {
 	}
 	
 	public Chunk getChunk(int x, int y) {
-		System.out.println(x+ " " +y);
 		for(Chunk chunk : chunks) {
 			if((int) x / 5 == chunk.getX() && (int) y / 5 == chunk.getY()) {
 				return chunk;
