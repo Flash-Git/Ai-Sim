@@ -39,8 +39,8 @@ public class World {
 			for(int y = 0; y < height; y++) {
 				allNodes.add(new Node(x, y, null));
 				if(x % 5 == 0 && y % 5 == 0) {
-					chunkManager.addChunk(new Chunk(x/5, y/5));
-					System.out.println("new chunk " + x/5 + " " +y/5);
+					chunkManager.addChunk(new Chunk(x / 5, y / 5));
+					System.out.println("new chunk " + x / 5 + " " + y / 5);
 					
 				}
 			}

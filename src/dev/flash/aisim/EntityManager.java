@@ -56,7 +56,7 @@ public class EntityManager {
 		ArrayList<Ai> aiList = new ArrayList<>();
 		for(int x = -3; x < 7; x++) {
 			for(int y = -3; y < 7; y++) {
-				Chunk testChunk = chunkManager.getChunk((x + aiChunk.getX())*5, (y + aiChunk.getY())*5);
+				Chunk testChunk = chunkManager.getChunk((x + aiChunk.getX()) * 5, (y + aiChunk.getY()) * 5);
 				if(testChunk == null) {
 					continue;
 				}
@@ -79,11 +79,11 @@ public class EntityManager {
 		
 		if(red > green && red > blue) {
 			colourScore[0] = 0;
-		}else if(green > red && green > blue) {
-			colourScore[0] =  1;
-		}else if(blue > red && blue > green) {
-			colourScore[0] =  2;
-		}else{
+		} else if(green > red && green > blue) {
+			colourScore[0] = 1;
+		} else if(blue > red && blue > green) {
+			colourScore[0] = 2;
+		} else {
 			colourScore[0] = 3;
 		}
 		
