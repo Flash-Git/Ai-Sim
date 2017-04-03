@@ -69,25 +69,24 @@ public class EntityManager {
 		}
 	}
 	
-	public int[] getColourScore(Color colour1, Color colour2) {
+	public int[] getColourScore(Color colour1, Color colour2) {//TODO
 		int red = colour1.getRed() - colour2.getRed();
 		int green = colour1.getGreen() - colour2.getGreen();
 		int blue = colour1.getBlue() - colour2.getBlue();
-		int[] colourScore = new int[1];
+		int[] colourScore = new int[3];
 		colourScore[0] = 5;
 		
-		/*
+		
 		if(red > green && red > blue) {
-			return 0;
+			colourScore[0] = 0;
+		}else if(green > red && green > blue) {
+			colourScore[0] =  1;
+		}else if(blue > red && blue > green) {
+			colourScore[0] =  2;
+		}else{
+			colourScore[0] = 3;
 		}
-		if(green > red && green > blue) {
-			return 1;
-		}
-		if(blue > red && blue > green) {
-			return 2;
-		}
-		return 3;
-		*/
+		
 		return colourScore;
 	}
 	
