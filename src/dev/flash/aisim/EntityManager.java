@@ -30,12 +30,13 @@ public class EntityManager {
 		if(turnTimer.isDone()) {
 			for(Ai e : entities) {
 				e.turn();
-				getTarget(e);
+				
 			}
 		}
 		if(tempTimer.isDone()) {
 			for(Ai e : entities) {
-				e.getNewTarget();
+				getTarget(e);
+				//e.getNewTarget();
 			}
 		}
 	}
@@ -63,28 +64,53 @@ public class EntityManager {
 				aiList.addAll(testChunk.getAis());
 			}
 		}
-		System.out.println(aiList.size());
+		//System.out.println(aiList.size());
+		Ai aiHighestScore = ai;
+		int highestScore = -1000;
 		for(Ai targetAi : aiList) {
-			getColourScore(ai.getColor(), targetAi.getColor());
+			if(ai.equals(targetAi)) {
+				continue;
+			}
+			int[] colourScore = getColourScore(ai.getColor(), targetAi.getColor());
+			System.out.println(colourScore[0] + " " + colourScore[1]);
+			if(highestScore < colourScore[1]) {
+				highestScore = colourScore[1];
+				aiHighestScore = targetAi;
+			}
+			if(aiHighestScore.equals(ai)){
+				return;
+			}
+			ai.setTarget(new Vector2(aiHighestScore.getPos().x, aiHighestScore.getPos().y));
+			
+			System.out.println(aiHighestScore.getPos().x + ", " + aiHighestScore.getPos().y + " : " + colourScore[0] + ", " + colourScore[1]);
 		}
 	}
 	
-	public int[] getColourScore(Color colour1, Color colour2) {//TODO
-		int red = colour1.getRed() - colour2.getRed();
-		int green = colour1.getGreen() - colour2.getGreen();
-		int blue = colour1.getBlue() - colour2.getBlue();
-		int[] colourScore = new int[3];
-		colourScore[0] = 5;
+	public int[] getColourScore(Color colour1, Color colour2) {
 		
+		int[] colourScore = new int[2];
 		
-		if(red > green && red > blue) {
-			colourScore[0] = 0;
-		} else if(green > red && green > blue) {
-			colourScore[0] = 1;
-		} else if(blue > red && blue > green) {
-			colourScore[0] = 2;
+		int red = (colour1.getRed() - colour2.getRed()) - (colour1.getGreen() - colour2.getGreen());
+		int green = (colour1.getGreen() - colour2.getGreen()) - (colour1.getBlue() - colour2.getBlue());
+		int blue = (colour1.getBlue() - colour2.getBlue()) - (colour1.getRed() - colour2.getRed());
+		
+		if(red > blue) {
+			if(red > green) {
+				colourScore[0] = 1;
+				colourScore[1] = red;
+			} else {
+				colourScore[0] = 2;
+				colourScore[1] = green;
+			}
 		} else {
-			colourScore[0] = 3;
+			if(blue > green) {
+				colourScore[0] = 3;
+				colourScore[1] = blue;
+				
+			} else {
+				colourScore[0] = 2;
+				colourScore[1] = green;
+			}
 		}
 		
 		return colourScore;

@@ -40,7 +40,7 @@ public class World {
 				allNodes.add(new Node(x, y, null));
 				if(x % 5 == 0 && y % 5 == 0) {
 					chunkManager.addChunk(new Chunk(x / 5, y / 5));
-					System.out.println("new chunk " + x / 5 + " " + y / 5);
+					System.out.println("Created Chunk at: " + x / 5 + " " + y / 5);
 					
 				}
 			}

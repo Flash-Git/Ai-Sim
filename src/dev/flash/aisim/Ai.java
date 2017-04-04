@@ -110,7 +110,7 @@ public class Ai {
 		pos = newPos;
 		return true;
 	}
-	
+	/*
 	public boolean getNewTarget() {
 		Ai red = handler.getWorld().red;
 		Ai blue = handler.getWorld().blue;
@@ -134,19 +134,20 @@ public class Ai {
 		}
 		return false;
 		
-		/*
-		Random random = new Random();
-		
-		Vector2 newPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
-		
-		if(!handler.getEntityManager().posClear(newPos)) {
-			return false;
-		}
-		target = newPos;
-		return true;
-		*/
 	}
+	*/
 	
+	/*
+	Random random = new Random();
+	
+	Vector2 newPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
+	
+	if(!handler.getEntityManager().posClear(newPos)) {
+		return false;
+	}
+	target = newPos;
+	return true;
+	*/
 	
 	//GETTERS AND SETTERS
 	
@@ -209,5 +210,13 @@ public class Ai {
 	
 	public void setHpReq(int hpReq) {
 		this.hpReq = hpReq;
+	}
+	
+	public Vector2 getTarget() {
+		return target;
+	}
+	
+	public void setTarget(Vector2 target) {
+		this.target = target;
 	}
 }
