@@ -71,6 +71,10 @@ public class EntityManager {
 			if(ai.equals(targetAi)) {
 				continue;
 			}
+			if(ai.isDead()||targetAi.isDead()){
+				continue;
+			}
+			
 			int[] colourScore = getColourScore(ai.getColor(), targetAi.getColor());
 			if(highestScore < colourScore[1]) {
 				highestScore = colourScore[1];

@@ -29,6 +29,8 @@ public class Ai {
 	
 	private Color color;
 	
+	private boolean dead = false;
+	
 	private Handler handler;
 	
 	private Vector2 target;
@@ -57,6 +59,9 @@ public class Ai {
 	}
 	
 	public void turn() {
+		if(dead) {
+			return;
+		}
 		AStar.generatePath(handler, path, new Vector2((int) pos.x, (int) pos.y), target);
 		//Random direction = new Random();
 		//move(direction.nextInt(4));
@@ -69,23 +74,27 @@ public class Ai {
 	}
 	
 	private void tryAttack() {
-		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x+1, pos.y))){
-			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x+1, pos.y)));
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x + 1, pos.y))) {
+			handler.getEntityManager().posAi(new Vector2(pos.x + 1, pos.y)).setDead(true);
 		}
-		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y+1))){
-			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x, pos.y+1)));
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y + 1))) {
+			handler.getEntityManager().posAi(new Vector2(pos.x, pos.y + 1)).setDead(true);
 		}
-		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x-1, pos.y))){
-			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x-1, pos.y)));
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x - 1, pos.y))) {
+			handler.getEntityManager().posAi(new Vector2(pos.x - 1, pos.y)).setDead(true);
 		}
-		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y-1))){
-			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x, pos.y-1)));
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y - 1))) {
+			handler.getEntityManager().posAi(new Vector2(pos.x, pos.y - 1)).setDead(true);
 		}
 	}
 	
 	public void render(Graphics g) {
 		g.setColor(color);
-		g.fillRect((int) pos.x * 8 + 1, (int) pos.y * 8 + 1, 6, 6);
+		if(dead) {
+			g.fillOval((int) pos.x * 8 + 2, (int) pos.y * 8 + 2, 4, 4);
+		} else {
+			g.fillRect((int) pos.x * 8 + 1, (int) pos.y * 8 + 1, 6, 6);
+		}
 	}
 	
 	public boolean move(int x, int y) {
@@ -234,5 +243,13 @@ public class Ai {
 	
 	public void setTarget(Vector2 target) {
 		this.target = target;
+	}
+	
+	public boolean isDead() {
+		return dead;
+	}
+	
+	public void setDead(boolean dead) {
+		this.dead = dead;
 	}
 }
