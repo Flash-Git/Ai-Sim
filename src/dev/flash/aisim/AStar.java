@@ -162,13 +162,13 @@ public class AStar {
 	}
 	
 	private static boolean checkValid(Handler handler, int x, int y) {
-		if((x > handler.getWorld().getWidth())) {
+		if((x > handler.getWorld().getWidth()-1)) {
 			return false;//if node is out of bounds
 		}
 		if((x < 0)) {
 			return false;//if node is out of bounds
 		}
-		if((y > handler.getWorld().getHeight())) {
+		if((y > handler.getWorld().getHeight()-1)) {
 			return false;//if node is out of bounds
 		}
 		if((y < 0)) {

@@ -53,36 +53,33 @@ public class EntityManager {
 	public void getTarget(Ai ai) {
 		ChunkManager chunkManager = handler.getChunkManager();
 		Chunk aiChunk = chunkManager.getChunk((int) ai.getPos().x, (int) ai.getPos().y);
-		//System.out.println(aiChunk.getX());
 		ArrayList<Ai> aiList = new ArrayList<>();
 		for(int x = -3; x < 7; x++) {
 			for(int y = -3; y < 7; y++) {
 				Chunk testChunk = chunkManager.getChunk((x + aiChunk.getX()) * 5, (y + aiChunk.getY()) * 5);
+				//System.out.println(testChunk.getX() + " "+ testChunk.getY());
+				
 				if(testChunk == null) {
 					continue;
 				}
 				aiList.addAll(testChunk.getAis());
 			}
 		}
-		//System.out.println(aiList.size());
 		Ai aiHighestScore = ai;
-		int highestScore = -1000;
+		int highestScore = 100;
 		for(Ai targetAi : aiList) {
 			if(ai.equals(targetAi)) {
 				continue;
 			}
 			int[] colourScore = getColourScore(ai.getColor(), targetAi.getColor());
-			System.out.println(colourScore[0] + " " + colourScore[1]);
 			if(highestScore < colourScore[1]) {
 				highestScore = colourScore[1];
 				aiHighestScore = targetAi;
 			}
-			if(aiHighestScore.equals(ai)){
+			if(aiHighestScore.equals(ai)) {
 				return;
 			}
 			ai.setTarget(new Vector2(aiHighestScore.getPos().x, aiHighestScore.getPos().y));
-			
-			System.out.println(aiHighestScore.getPos().x + ", " + aiHighestScore.getPos().y + " : " + colourScore[0] + ", " + colourScore[1]);
 		}
 	}
 	
@@ -121,6 +118,7 @@ public class EntityManager {
 	}
 	
 	public void removeEntity(Ai e) {
+		handler.getChunkManager().getChunk((int) e.getPos().x, (int) e.getPos().y).getAis().remove(e);
 		entities.remove(e);
 	}
 	
@@ -144,6 +142,24 @@ public class EntityManager {
 			}
 		}
 		return true;
+	}
+	
+	public boolean posClearAi(Vector2 pos) {
+		for(Ai e : entities) {
+			if(e.getPos().x == pos.x && e.getPos().y == pos.y) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public Ai posAi(Vector2 pos) {
+		for(Ai e : entities) {
+			if(e.getPos().x == pos.x && e.getPos().y == pos.y) {
+				return e;
+			}
+		}
+		return null;
 	}
 	
 	/*public Ai getEntity(int x, int y) {

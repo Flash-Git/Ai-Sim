@@ -28,7 +28,7 @@ public class ChunkManager {
 				return chunk;
 			}
 		}
-		System.err.println("no chunk at " + x + " " + y);
+		//System.err.println("no chunk at " + x + " " + y);
 		return null;
 	}
 	

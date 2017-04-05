@@ -48,7 +48,7 @@ public class Ai {
 		path = new ArrayList<>();
 		target = new Vector2(pos.x, (int) pos.y);
 		handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getAis().add(this);
-		System.out.println(handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getX() + " " + handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getY());
+		//System.out.println(handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getX() + " " + handler.getChunkManager().getChunk((int) pos.x, (int) pos.y).getY());
 		
 	}
 	
@@ -65,6 +65,22 @@ public class Ai {
 			return;
 		
 		move(path.get(0).getX(), path.get(0).getY());
+		tryAttack();
+	}
+	
+	private void tryAttack() {
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x+1, pos.y))){
+			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x+1, pos.y)));
+		}
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y+1))){
+			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x, pos.y+1)));
+		}
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x-1, pos.y))){
+			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x-1, pos.y)));
+		}
+		if(!handler.getEntityManager().posClearAi(new Vector2(pos.x, pos.y-1))){
+			handler.getEntityManager().removeEntity(handler.getEntityManager().posAi(new Vector2(pos.x, pos.y-1)));
+		}
 	}
 	
 	public void render(Graphics g) {

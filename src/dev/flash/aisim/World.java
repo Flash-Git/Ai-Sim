@@ -41,7 +41,6 @@ public class World {
 				if(x % 5 == 0 && y % 5 == 0) {
 					chunkManager.addChunk(new Chunk(x / 5, y / 5));
 					System.out.println("Created Chunk at: " + x / 5 + " " + y / 5);
-					
 				}
 			}
 		}
