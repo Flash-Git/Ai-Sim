@@ -71,7 +71,7 @@ public class EntityManager {
 			if(ai.equals(targetAi)) {
 				continue;
 			}
-			if(ai.isDead()||targetAi.isDead()){
+			if(ai.isDead() || targetAi.isDead()) {
 				continue;
 			}
 			

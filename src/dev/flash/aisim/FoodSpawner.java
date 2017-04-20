@@ -39,7 +39,7 @@ public class FoodSpawner {
 	public void spawnAi() {
 		Vector2 aiPos = new Vector2(random.nextInt(handler.getWorld().getWidth()), random.nextInt(handler.getWorld().getHeight()));
 		if(handler.getEntityManager().posClear(aiPos)) {
-			handler.getEntityManager().addEntity(new Ai(handler, aiPos, new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)),3, 5, 4, 5));
+			handler.getEntityManager().addEntity(new Ai(handler, aiPos, new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)), 3, 5, 4, 5));
 		} else {
 			spawnFood();
 		}
