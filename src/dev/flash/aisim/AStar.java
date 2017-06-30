@@ -56,7 +56,7 @@ public class AStar {
 		Node parent = containsNode((int) start.x, (int) start.y, World.allNodes);//Node that points to the Node that led to it's creation //Initial Node
 		
 		if(parent == null) {
-			System.err.println("no node found on allNodes list at " + parent.getX() + ", " + parent.getY() + " for initial parent node");
+			System.err.println("no node found on allNodes list at " + start.x + ", " + start.y + " for initial parent node");
 			return;
 		}
 		Node n = null;//Node that takes the values of the nodes as we handle them
@@ -64,7 +64,7 @@ public class AStar {
 		open.add(parent);//Adds our initial node to the open list (to check and get available children)
 		Node.dest = containsNode((int) target.x, (int) target.y, World.allNodes);//static destination node
 		if(Node.dest == null) {
-			System.err.println("no node found on allNodes list at " + Node.dest.getX() + ", " + Node.dest.getY() + " for destination node");
+			System.err.println("no node found on allNodes list at " + target.x + ", " + target.y + " for destination node");
 			return;
 		}
 		//Start of for loop
